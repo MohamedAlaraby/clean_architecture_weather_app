@@ -6,8 +6,9 @@ import 'package:weather/weather/domain/usecases/get_weather_by_country_name.dart
 
 void main() async {
   BaseRemoteDataSource baseRemoteDataSource = RemoteDataSource();
-  BaseWeatherRepository weatherRepository   = WeatherRepository(baseRemoteDataSource);
-      
+  BaseWeatherRepository weatherRepository =
+      WeatherRepository(baseRemoteDataSource);
+
   await GetWeatherByCityName(weatherRepository).execute("Mansoura,eg");
   runApp(const MyApp());
 }
